@@ -1,5 +1,6 @@
-# Demystifying LLM-based Software Engineering Agents
-My own agentless approach to automatically solving software development problems
+# About
+The research paper proposes a 3 phase process for solving software development problems. 
+
 
 # References
 AGENTLESS: Demystifying LLM-based Software Engineering Agents
