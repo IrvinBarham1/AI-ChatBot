@@ -16,7 +16,7 @@ Generative AI: Today’s focus is on models creating text, images, and other con
 Agentic AI: The rise of autonomous agents capable of managing workflows, solving problems, and delivering insights.
 Physical AI: The next step—AI systems gaining embodiment to operate and interact in the physical world.
 
-*My Plan*
+# My Plan
 
 What I will implement here for this project is my own multi-agent AI solution that follows an organizational structure. I will use inspirations from social hierarchies in nature and corporate companies in order to design a multi-agent AI that is effective and adaptable to a broad range of problems related to software engineering. 
 
