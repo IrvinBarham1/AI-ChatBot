@@ -17,6 +17,7 @@ Agentic AI: The rise of autonomous agents capable of managing workflows, solving
 Physical AI: The next step – AI systems gaining embodiment to operate and interact in the physical world.
 
 *My Plan*
+
 What I will implement here for this project is my own multi Agentic AI solution which follows an organizational strucuture. I will use inspiriations from social heirachies in nature and coporate companies in order to design a multi Agentic AI that is effective and adaptable to a broad range of problems related to software engineering. 
 
 # References
