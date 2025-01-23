@@ -9,13 +9,12 @@ Notably, when the authors of this research paper released Agentless (*October 20
 
 Although an agentless solution can be effective, the future of AI will inevitably include agentic AIs. Moreover, Nvidia, as a leader in this space, has created a roadmap for AI's evolution that goes in this order:
 
-“🦸🏻#7: From Agentic AI to Physical AI.” Huggingface.co, 2025, huggingface.co/blog/Kseniase/physicalai. Accessed 23 Jan. 2025.
-
 Perception AI: The foundation of modern machine learning, where systems are trained to interpret and analyze data.
 Generative AI: Today’s focus is on models creating text, images, and other content that are transforming industries like gaming, marketing, and media.
 Agentic AI: The rise of autonomous agents capable of managing workflows, solving problems, and delivering insights.
 Physical AI: The next step—AI systems gaining embodiment to operate and interact in the physical world.
 
+*“🦸🏻#7: From Agentic AI to Physical AI.” Huggingface.co, 2025, huggingface.co/blog/Kseniase/physicalai. Accessed 23 Jan. 2025.*
 # My Plan
 
 What I will implement here for this project is my own multi-agent AI solution that follows an organizational structure. I will use inspirations from social hierarchies in nature and corporate companies in order to design a multi-agent AI that is effective and adaptable to a broad range of problems related to software engineering. 
