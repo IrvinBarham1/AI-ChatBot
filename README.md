@@ -1,5 +1,5 @@
 # About
-*This is a showcase of my exploration of the research of "Agentless" an approach for resolving real-world software engineering problems proposed by research students at the University of Illinois at Urbana-Champaign. This endeavor aims to broaden my understanding of this concept and conduct my own research on this topic.*
+*This is a showcase of my exploration of the research of "Agentless" an approach for resolving real-world software engineering problems proposed by research students at the University of Illinois at Urbana-Champaign. This endeavor aims to broaden my understanding of Agentic AI and conduct my own research on this topic.*
 
 A brief summary: Agentless's goal is to improve an AI model's ability to execute end-to-end objectives/tasks in software development. Additionally, the authors behind this research challenge the idea of the effectiveness of an agent-based model. The approach designed by the authors is said to have 3 phases: localization, repairing, and patching. They explain the three phases and more details about Agentless here: https://arxiv.org/abs/2407.0148
 
