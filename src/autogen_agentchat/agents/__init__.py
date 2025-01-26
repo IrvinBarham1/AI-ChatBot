@@ -8,6 +8,7 @@ from ._base_chat_agent import BaseChatAgent
 from ._code_executor_agent import CodeExecutorAgent
 from ._society_of_mind_agent import SocietyOfMindAgent
 from ._user_proxy_agent import UserProxyAgent
+from ._irvins_agent import EmperorAgent
 
 __all__ = [
     "BaseChatAgent",
@@ -15,4 +16,5 @@ __all__ = [
     "CodeExecutorAgent",
     "SocietyOfMindAgent",
     "UserProxyAgent",
+    "EmperorAgent"
 ]

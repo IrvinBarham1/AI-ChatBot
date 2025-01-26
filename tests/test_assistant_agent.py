@@ -776,3 +776,9 @@ async def test_assistant_agent_declarative(monkeypatch: pytest.MonkeyPatch) -> N
     )
     with pytest.raises(NotImplementedError):
         agent3.dump_component()
+
+def test_assistant_agent():
+    print("This is a test message")
+
+if __name__ == "__main__":
+    test_assistant_agent()
