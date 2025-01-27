@@ -1,16 +1,13 @@
-
 from typing import AsyncGenerator, List, Sequence, Tuple
 
 from autogen_agentchat.agents import BaseChatAgent
 from autogen_agentchat.base import Response
 from autogen_agentchat.messages import AgentEvent, ChatMessage, TextMessage
 from autogen_core import CancellationToken
-from tqdm import asyncio
 
 
 class CountDownAgent(BaseChatAgent):
-
-    def __init__(self, name: str, count: int = 3):
+    def __init__(self, name: str, count: int = 1):
         super().__init__(name, "A simple agent that counts down.")
         self._count = count
 
@@ -27,7 +24,6 @@ class CountDownAgent(BaseChatAgent):
         assert response is not None
         return response
 
-
     async def on_messages_stream(
         self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
     ) -> AsyncGenerator[AgentEvent | ChatMessage | Response, None]:
@@ -43,16 +39,14 @@ class CountDownAgent(BaseChatAgent):
     async def on_reset(self, cancellation_token: CancellationToken) -> None:
         pass
 
+
 async def run_countdown_agent() -> None:
     # Create a countdown agent.
     countdown_agent = CountDownAgent("countdown")
+
     # Run the agent with a given task and stream the response.
     async for message in countdown_agent.on_messages_stream([], CancellationToken()):
         if isinstance(message, Response):
             print(message.chat_message.content)
         else:
             print(message.content)
-
-    await run_countdown_agent()
-
-
