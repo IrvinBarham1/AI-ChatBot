@@ -1,3 +1,10 @@
+from autogen_core.models import UserMessage
+
+async def get_response(model_client):
+    response = await model_client.create([UserMessage(content="What is the capital of France?", source="user")])
+    print("Here: " + response)
+
+
 from abc import ABC, abstractmethod
 from typing import Any, AsyncGenerator, List, Mapping, Sequence
 

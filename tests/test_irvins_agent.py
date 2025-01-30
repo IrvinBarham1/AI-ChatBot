@@ -1,25 +1,35 @@
-import pytest
+import asyncio
+import unittest
 
-from src.autogen_agentchat.agents import EmperorAgent
-from autogen_agentchat.base import Response
-from autogen_agentchat.messages import TextMessage
-from autogen_core import CancellationToken
-from autogen_ext.code_executors.local import LocalCommandLineCodeExecutor
+from autogen_core.models import UserMessage
+from autogen_ext.models.openai import OpenAIChatCompletionClient
+"""Testing a local model"""
 
-@pytest.mark.asyncio
-async def test_irvins_agent_execution() -> None:
-    """Test Irvin's Agent"""
+response = None
+model_client = OpenAIChatCompletionClient(
+    model="llama3.2:latest",
+    base_url="http://localhost:11434/v1",
+    api_key="placeholder",
+    model_info={
+        "vision": False,
+        "function_calling": True,
+        "json_output": False,
+        "family": "unknown",
+    },
+)
 
-    agent = EmperorAgent(name="Emperor", description=
-    "Emperor Agent that receives its power from the council of agents. It is the leader, the emperor.")
+async def get_response():
+    response = await model_client.create([UserMessage(content="Will you be the Emperor of my agents?", source="user")])
+    print(response.content)
+    return response.content
 
-    response = await agent.on_messages(
-        [TextMessage(content="What is your objective Emperor?", source="user")],
-        cancellation_token=CancellationToken(),
-    )
-    print(response.inner_messages)
-    print(response.chat_message)
+class TestIrvinsAgent(unittest.TestCase):
+    def test_get_response(self):
+        loop = asyncio.get_event_loop()
+        response = loop.run_until_complete(get_response())
+        expected_content = " capital of France is Paris."
+        self.assertEqual(response, expected_content,f"Expected '{expected_content}', but got '{response}'")
 
-    await test_irvins_agent_execution()
-    await agent.on_reset(CancellationToken())
-    assert agent.name == "Emperor"
+
+if __name__ == "__main__":
+    unittest.main()

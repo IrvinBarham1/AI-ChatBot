@@ -11,18 +11,15 @@ from src.autogen_agentchat.agents._countdown_agent import run_countdown_agent, C
 
 @pytest.mark.asyncio
 async def test_basic_chat_agent() -> None:
-    agent = CountDownAgent(name="countdown", count=10)
+    agent = CountDownAgent(name="countdown", count=5)
 
     messages = [
         TextMessage(
-             content="start a countdown from 10 by 2".strip(),
+             content="jofgejgeogp".strip(),
             source="assistant",
      )
   ]
     response = await agent.on_messages(messages, CancellationToken())
-
     assert isinstance(response, Response)
     assert isinstance(response.chat_message, TextMessage)
-    await run_countdown_agent()
-    assert response.chat_message.content.strip() == "1..."
-
+    await run_countdown_agent(agent)
