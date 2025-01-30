@@ -7,7 +7,7 @@ from autogen_core import CancellationToken
 
 
 class CountDownAgent(BaseChatAgent):
-    def __init__(self, name: str, count: int = 1):
+    def __init__(self, name: str, count: int):
         super().__init__(name, "A simple agent that counts down.")
         self._count = count
 
@@ -39,10 +39,9 @@ class CountDownAgent(BaseChatAgent):
     async def on_reset(self, cancellation_token: CancellationToken) -> None:
         pass
 
-
-async def run_countdown_agent() -> None:
+async def run_countdown_agent(agent: CountDownAgent) -> None:
     # Create a countdown agent.
-    countdown_agent = CountDownAgent("countdown")
+    countdown_agent = agent
 
     # Run the agent with a given task and stream the response.
     async for message in countdown_agent.on_messages_stream([], CancellationToken()):
