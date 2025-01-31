@@ -1,10 +1,7 @@
 # Contents
-<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#about">About</a>
-
-<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#my-plan">My Plan</a> 
-
-<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#my-journey">My Journey</a> 
-
+<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#about">About</a> --- 
+<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#my-plan">My Plan</a> ---
+<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#my-journey">My Journey</a> ---
 <a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#references">References</a>
 
 # About
