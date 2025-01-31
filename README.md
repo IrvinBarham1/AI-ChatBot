@@ -1,3 +1,8 @@
+#Contents
+#-My Journey #-About #-My Plan #-References
+# My Journey
+I installed Autogen and I started the process of constructing my own custom agents. I asked deepseek-r1 if it would be my emperor for my agents and it gave an incrediably detailed response. I'm currently experimenting with which model I would like to be the leader as well as which models are good to give tasks too.  
+
 # About
 *This is a showcase of my exploration of the research of "Agentless" an approach for resolving real-world software engineering problems proposed by research students at the University of Illinois at Urbana-Champaign. This endeavor aims to broaden my understanding of Agentic AI and conduct my own research on this topic.*
 
