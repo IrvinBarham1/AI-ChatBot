@@ -32,8 +32,8 @@ Although an agentless solution can be effective, the future of AI will inevitabl
 What I will implement here for this project is my own multi-agent AI solution that follows an organizational structure. I will use inspirations from social hierarchies in nature and corporate companies in order to design a multi-agent AI that is effective and adaptable to a broad range of problems related to software engineering. 
 
 # My Journey
-I installed Autogen and I started the process of constructing my own custom agents. I asked deepseek-r1 if it would be my emperor for my agents and it gave an incrediably detailed response. I'm currently experimenting with which model I would like to be the leader as well as which models are good to give tasks too.  
-
+I installed Autogen and I started the process of constructing my own custom agents. I asked deepseek-r1 if it would be my emperor for my agents and it gave an incredibly detailed response. I'm currently experimenting with which model I would like to be the leader and which models are good to give tasks to. Here's the <a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence/blob/main/deepseek-r1.8b-llama-distill-fp16_Response%20to%20Emperor.pdf
+">response</a>.
 # References
 Xia, C. S., Deng, Y., Dunn, S., & Zhang, L. (2024). Agentless: Demystifying LLM-based Software Engineering Agents. ArXiv. https://arxiv.org/abs/2407.01489
 
