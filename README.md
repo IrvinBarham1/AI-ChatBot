@@ -6,8 +6,6 @@
 <a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#my-journey">My Journey</a> 
 
 <a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#references">References</a>
-# My Journey
-I installed Autogen and I started the process of constructing my own custom agents. I asked deepseek-r1 if it would be my emperor for my agents and it gave an incrediably detailed response. I'm currently experimenting with which model I would like to be the leader as well as which models are good to give tasks too.  
 
 # About
 *This is a showcase of my exploration of the research of "Agentless" an approach for resolving real-world software engineering problems proposed by research students at the University of Illinois at Urbana-Champaign. This endeavor aims to broaden my understanding of Agentic AI and conduct my own research on this topic.*
@@ -32,6 +30,9 @@ Although an agentless solution can be effective, the future of AI will inevitabl
 # My Plan
 
 What I will implement here for this project is my own multi-agent AI solution that follows an organizational structure. I will use inspirations from social hierarchies in nature and corporate companies in order to design a multi-agent AI that is effective and adaptable to a broad range of problems related to software engineering. 
+
+# My Journey
+I installed Autogen and I started the process of constructing my own custom agents. I asked deepseek-r1 if it would be my emperor for my agents and it gave an incrediably detailed response. I'm currently experimenting with which model I would like to be the leader as well as which models are good to give tasks too.  
 
 # References
 Xia, C. S., Deng, Y., Dunn, S., & Zhang, L. (2024). Agentless: Demystifying LLM-based Software Engineering Agents. ArXiv. https://arxiv.org/abs/2407.01489
