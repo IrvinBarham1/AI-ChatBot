@@ -1,5 +1,8 @@
-#Contents
-#-My Journey #-About #-My Plan #-References
+# Contents
+<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#my-journey">My Journey</a> 
+<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#about">About</a>
+<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#my-plan">My Plan</a> 
+<a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence?tab=readme-ov-file#references">References</a>
 # My Journey
 I installed Autogen and I started the process of constructing my own custom agents. I asked deepseek-r1 if it would be my emperor for my agents and it gave an incrediably detailed response. I'm currently experimenting with which model I would like to be the leader as well as which models are good to give tasks too.  
 
