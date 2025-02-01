@@ -47,6 +47,7 @@ from openai.types.chat.chat_completion_chunk import ChatCompletionChunk
 from openai.types.chat.chat_completion_message import ChatCompletionMessage
 from openai.types.chat.chat_completion_message_tool_call import ChatCompletionMessageToolCall, Function
 from openai.types.completion_usage import CompletionUsage
+
 from utils import FileLogHandler
 
 logger = logging.getLogger(EVENT_LOGGER_NAME)
@@ -1220,17 +1221,32 @@ async def test_round_robin_group_chat_with_message_list() -> None:
 @pytest.mark.asyncio
 async def test_declarative_groupchats_with_config() -> None:
     # Create basic agents and components for testing
-    agent1 = AssistantAgent(
-        "agent_1",
-        model_client=OpenAIChatCompletionClient(model="gpt-4o-2024-05-13", api_key=""),
+    emperor_agent = AssistantAgent(
+        "emperor_agent",
+        model_client=OpenAIChatCompletionClient(model="deepseek-r1:14b", base_url="http://localhost:11434/v1", api_key="placeholder", model_info={
+        "vision": False,
+        "function_calling": True,
+        "json_output": False,
+        "family": "unknown",
+    },),
         handoffs=["agent_2"],
     )
-    agent2 = AssistantAgent("agent_2", model_client=OpenAIChatCompletionClient(model="gpt-4o-2024-05-13", api_key=""))
+    agent2 = AssistantAgent("agent_2", model_client=OpenAIChatCompletionClient(model="deepseek-r1:1.5b", base_url="http://localhost:11434/v1", api_key="placeholder", model_info={
+        "vision": False,
+        "function_calling": True,
+        "json_output": False,
+        "family": "unknown",
+    },))
     termination = MaxMessageTermination(4)
-    model_client = OpenAIChatCompletionClient(model="gpt-4o-2024-05-13", api_key="")
+    model_client = OpenAIChatCompletionClient(model="llama3.2:latest", base_url="http://localhost:11434/v1", api_key="placeholder", model_info={
+        "vision": False,
+        "function_calling": True,
+        "json_output": False,
+        "family": "unknown",
+    },)
 
     # Test round robin - verify config is preserved
-    round_robin = RoundRobinGroupChat(participants=[agent1, agent2], termination_condition=termination, max_turns=5)
+    round_robin = RoundRobinGroupChat(participants=[emperor_agent, agent2], termination_condition=termination, max_turns=5)
     config = round_robin.dump_component()
     loaded = RoundRobinGroupChat.load_component(config)
     assert loaded.dump_component() == config
@@ -1238,7 +1254,7 @@ async def test_declarative_groupchats_with_config() -> None:
     # Test selector group chat - verify config is preserved
     selector_prompt = "Custom selector prompt with {roles}, {participants}, {history}"
     selector = SelectorGroupChat(
-        participants=[agent1, agent2],
+        participants=[emperor_agent, agent2],
         model_client=model_client,
         termination_condition=termination,
         max_turns=10,
@@ -1251,14 +1267,14 @@ async def test_declarative_groupchats_with_config() -> None:
 
     # Test swarm with handoff termination
     handoff_termination = HandoffTermination(target="Agent2")
-    swarm = Swarm(participants=[agent1, agent2], termination_condition=handoff_termination, max_turns=5)
+    swarm = Swarm(participants=[emperor_agent, agent2], termination_condition=handoff_termination, max_turns=5)
     swarm_config = swarm.dump_component()
     swarm_loaded = Swarm.load_component(swarm_config)
     assert swarm_loaded.dump_component() == swarm_config
 
     # Test MagenticOne with custom parameters
     magentic = MagenticOneGroupChat(
-        participants=[agent1],
+        participants=[emperor_agent],
         model_client=model_client,
         max_turns=15,
         max_stalls=5,

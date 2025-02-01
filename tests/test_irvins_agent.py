@@ -7,7 +7,7 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 
 response = None
 model_client = OpenAIChatCompletionClient(
-    model="llama3.2:latest",
+    model="deepseek-r1:8b",
     base_url="http://localhost:11434/v1",
     api_key="placeholder",
     model_info={
