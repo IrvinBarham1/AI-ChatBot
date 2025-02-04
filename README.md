@@ -33,7 +33,6 @@ I installed Autogen and I started the process of constructing my own custom agen
 ">response</a>. I'm currently experimenting with which model I would like to be the leader and which models are good to give tasks to.
 
 # References
+Xia, C. S., Deng, Y., Dunn, S., & Zhang, L. (2024). Agentless: Demystifying LLM-based Software Engineering Agents. ArXiv. https://arxiv.org/abs/2407.01489
 
 Jimenez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K., Press, O., & Narasimhan, K. (2023). SWE-bench: Can Language Models Resolve Real-World GitHub Issues? ArXiv. https://arxiv.org/abs/2310.06770
-
-“🦸🏻#7: From Agentic AI to Physical AI.” Huggingface.co, 2025, huggingface.co/blog/Kseniase/physicalai. Accessed 23 Jan. 2025.
