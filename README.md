@@ -32,6 +32,8 @@ What I will implement here for this project is my own multi-agent AI solution th
 I installed Autogen and I started the process of constructing my own custom agents. I asked deepseek-r1 if it would be my emperor for my agents and it gave an incredibly detailed <a href="https://github.com/IrvinBarham1/Agentic-Artifical-Intelligence/blob/main/deepseek-r1.8b-llama-distill-fp16_Response%20to%20Emperor.pdf
 ">response</a>. I'm currently experimenting with which model I would like to be the leader and which models are good to give tasks to.
 
+# References
+
 Jimenez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K., Press, O., & Narasimhan, K. (2023). SWE-bench: Can Language Models Resolve Real-World GitHub Issues? ArXiv. https://arxiv.org/abs/2310.06770
 
 “🦸🏻#7: From Agentic AI to Physical AI.” Huggingface.co, 2025, huggingface.co/blog/Kseniase/physicalai. Accessed 23 Jan. 2025.
